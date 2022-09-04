@@ -1,0 +1,134 @@
+class Vehicle
+{
+	public   String fuelName;
+	public   String vehicleName;
+	public   String vehicleStatus;
+	public   String vehicleOrigin;	
+}
+
+class Car extends Vehicle
+{
+	public Car() {
+	}
+
+	public String getFuelName() {
+		return fuelName;
+	}
+
+	public void setFuelName(String fuelName) {
+		this.fuelName = fuelName;
+	}
+
+	public String getVehicleName() {
+		return vehicleName;
+	}
+
+	public void setVehicleName(String vehicleName) {
+		this.vehicleName = vehicleName;
+	}
+
+	public String getVehicleStatus() {
+		return vehicleStatus;
+	}
+
+	public void setVehicleStatus(String vehicleStatus) {
+		this.vehicleStatus = vehicleStatus;
+	}
+
+	public String getVehicleOrigin() {
+		return vehicleOrigin;
+	}
+
+	public void setVehicleOrigin(String vehicleOrigin) {
+		this.vehicleOrigin = vehicleOrigin;
+	}
+	
+	
+}
+
+class Bike extends Vehicle
+{
+	
+	public Bike() {
+	}
+
+	public String getFuelName() {
+		return fuelName;
+	}
+
+	public void setFuelName(String fuelName) {
+		this.fuelName = fuelName;
+	}
+
+	public String getVehicleName() {
+		return vehicleName;
+	}
+
+	public void setVehicleName(String vehicleName) {
+		this.vehicleName = vehicleName;
+	}
+
+	public String getVehicleStatus() {
+		return vehicleStatus;
+	}
+
+	public void setVehicleStatus(String vehicleStatus) {
+		this.vehicleStatus = vehicleStatus;
+	}
+
+	public String getVehicleOrigin() {
+		return vehicleOrigin;
+	}
+
+	public void setVehicleOrigin(String vehicleOrigin) {
+		this.vehicleOrigin = vehicleOrigin;
+	}
+	
+}
+
+class Person
+{
+	String name = "";
+
+	Person(String n)
+	{
+		name = n;
+	}
+}
+
+public class Test
+{
+	public static void main(String[] args)
+	{
+		Person p1 = new Person("Saurabh");
+		System.out.println("User Name : "+p1.name);
+		
+		System.out.println("Car Details................");
+		Car carObj=new Car();
+		//Properties Value set by Setter Method
+		carObj.setFuelName("Diesel");
+		carObj.setVehicleName("Honda Accord");
+		carObj.setVehicleOrigin("India");
+		carObj.setVehicleStatus("New");
+		//Properties Value get by Getter Method
+		System.out.println("Fuel : "+carObj.getFuelName());
+		System.out.println("Vehicle : "+carObj.getVehicleName());
+		System.out.println("Status : "+carObj.getVehicleStatus());
+		System.out.println("Origin : "+carObj.getVehicleOrigin());
+		
+		System.out.println("Bike Details................");
+		Bike bikeObj=new Bike();
+		//Properties Value set by Setter Method
+		bikeObj.setFuelName("Petrol");
+		bikeObj.setVehicleName("Ducati");
+		bikeObj.setVehicleOrigin("Used");
+		bikeObj.setVehicleStatus("Imported");
+		//Properties Value get by Getter Method
+		System.out.println("Fuel : "+bikeObj.getFuelName());
+		System.out.println("Vehicle : "+bikeObj.getVehicleName());
+		System.out.println("Status : "+bikeObj.getVehicleStatus());
+		System.out.println("Origin : "+bikeObj.getVehicleOrigin());
+	}
+
+}
+
