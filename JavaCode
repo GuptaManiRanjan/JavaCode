@@ -1,0 +1,113 @@
+package com.gupta;
+
+interface Vehicle
+{
+	public   String getFuelName();
+	public   String getVehicleName();
+	public   String getVehicleStatus();
+	public   String getVehicleOrigin();	
+	
+}
+
+class Car implements Vehicle
+{
+	private   String fuelName;
+	private   String vehicleName;
+	private   String vehicleStatus;
+	private   String vehicleOrigin;
+
+	public Car(String fuelName, String vehicleName, String vehicleStatus, String vehicleOrigin) {
+		this.fuelName = fuelName;
+		this.vehicleName = vehicleName;
+		this.vehicleStatus = vehicleStatus;
+		this.vehicleOrigin = vehicleOrigin;
+	}
+	
+	@Override
+	public String getFuelName() {
+		return fuelName;
+	}
+
+	@Override
+	public String getVehicleName() {
+		return vehicleName;
+	}
+
+	@Override
+	public String getVehicleStatus() {
+		return vehicleStatus;
+	}
+
+	@Override
+	public String getVehicleOrigin() {
+		return vehicleOrigin;
+	}
+}
+
+class Bike implements Vehicle
+{
+	private   String fuelName;
+	private   String vehicleName;
+	private   String vehicleStatus;
+	private   String vehicleOrigin;
+	
+	public Bike(String fuelName, String vehicleName, String vehicleStatus, String vehicleOrigin) {
+		this.fuelName = fuelName;
+		this.vehicleName = vehicleName;
+		this.vehicleStatus = vehicleStatus;
+		this.vehicleOrigin = vehicleOrigin;
+	}
+
+	@Override
+	public String getFuelName() {
+		return fuelName;
+	}
+
+	@Override
+	public String getVehicleName() {
+		return vehicleName;
+	}
+
+	@Override
+	public String getVehicleStatus() {
+		return vehicleStatus;
+	}
+
+	@Override
+	public String getVehicleOrigin() {
+		return vehicleOrigin;
+	}
+	
+}
+
+class Person
+{
+	String name = "";
+
+	Person(String n)
+	{
+		name = n;
+	}
+}
+
+public class Test
+{
+	public static void main(String[] args)
+	{
+		Person p1 = new Person("Saurabh");
+		System.out.println("User Name : "+p1.name);
+		System.out.println("Car Details................");
+		Car carObj=new Car("Diesel","Honda Accord","New","India");	
+		System.out.println("Fuel : "+carObj.getFuelName());
+		System.out.println("Vehicle : "+carObj.getVehicleName());
+		System.out.println("Status : "+carObj.getVehicleStatus());
+		System.out.println("Origin : "+carObj.getVehicleOrigin());
+		System.out.println("Bike Details................");
+		Bike bikeObj=new Bike("Petrol","Ducati","Used","Imported");	
+		System.out.println("Fuel : "+bikeObj.getFuelName());
+		System.out.println("Vehicle : "+bikeObj.getVehicleName());
+		System.out.println("Status : "+bikeObj.getVehicleStatus());
+		System.out.println("Origin : "+bikeObj.getVehicleOrigin());
+	}
+
+}
